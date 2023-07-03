@@ -823,7 +823,11 @@ form span {
 
 
 /***desktop view***/
-@media only screen and (min-width:992px) {
+@media screen and (min-width: 769px) {
+	body {
+		width: 100%;
+		overflow-x: hidden;
+	}
 	.menu_list {
 		position: relative;
 		display: flex;
