@@ -21,7 +21,6 @@ const Products = () => {
 	
 	const allCategory = ["All", ...new Set(Data.map(product => product.category))];
 	const [products, setProducts] = useState(Data)
-	const [categories, setCategories] = useState(allCategory);
 	
 	const filterProducts = (category) => {
 		 if(category === "All") {
@@ -42,7 +41,7 @@ const Products = () => {
 		      <span ref={subRef}><p className={subInView ? "p p_show" : "p"}>Qui error adipisci rem rerum officia ut fuga molestias vel deleniti consectetur</p></span>
 		    </div>
 		    <div className="select_btn">
-		      {categories.map((category, index) => {
+		      {allCategory.map((category, index) => {
 		      	return (
 		      	  <button key={index} onClick={() => filterProducts(category)}>{category}</button>
 		      	)
